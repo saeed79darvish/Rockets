@@ -4,8 +4,11 @@
   "description": "rocket lunches react app",
   "main": "index.js",
   "scripts": {
-    "start":"node ./server/index.js",
-    "server":"nodemon ./server/index.js"
+    "start": "node ./db/index.js",
+    "server": "nodemon ./db/index.js",
+    "client": "node ./server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "webpack-dev": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -19,11 +22,25 @@
   "homepage": "https://github.com/saeed79darvish/Rockets#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.1",
     "express": "^4.16.4",
     "express-graphql": "^0.8.0",
-    "graphql": "^14.2.1"
+    "graphql": "^14.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.18.11",
+    "webpack": "^2.2.1",
+    "webpack-cli": "^2.1.3"
   }
 }
