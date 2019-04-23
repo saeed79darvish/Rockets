@@ -16,6 +16,11 @@ class Header extends Component {
                     <h5>About</h5>
 
                 </Link>
+                <Link to="/live-video" className="btn ">
+                    <h5>Live Video</h5>
+
+                </Link>
+                
             </div>
 
         );

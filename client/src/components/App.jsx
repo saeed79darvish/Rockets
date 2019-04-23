@@ -8,6 +8,7 @@ import Launch from './launch.jsx';
 import './App.css';
 import Header from './Header.jsx';
 import About from './About.jsx';
+import LiveVideo from './LiveVideo.jsx';
 
 const client = new ApolloClient({
     uri: 'http://localhost:5000/graphql'
@@ -30,15 +31,19 @@ class App extends React.Component {
 
                         }} />
                         <Header />
+                   
                     </div>
 
 
                     <div className="App">
+                
                        
                         <Route exact path="/" component={Launches} />
+                        <Route exact path="/live-video" component={LiveVideo}/>
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/launch/:flight_number" component={Launch} />
                     </div>
+                
 
                 </Router>
             </ApolloProvider>);
